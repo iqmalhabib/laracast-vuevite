@@ -1,15 +1,16 @@
+<script setup>
+import { useStorage } from '@/composables/useStorage';
+
+let name = useStorage('name', 'habib');
+let age = useStorage('age', 26);
+</script>
 <template>
-  <div class="about">
-    <h1>This is an about page test</h1>
+  <div>
+    <p>
+      What is your name? <input type="text" v-model="name">
+    </p>
+    <p>
+      How old are you? <input type="text" v-model="age">
+    </p>
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
